@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Computed Property</title>
+		<script src="vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+            <!-- Computed -->
+			<p>Value A: {{ increaseA }}</p>
+			<p>Value B: {{ increaseB }}</p>
+
+            <!-- Methods -->
+			<p>Value A: {{ handleIncreaseA() }}</p>
+			<p>Value B: {{ handleIncreaseB() }}</p>
+
+			<button @click="a++">Increase A</button>
+			<button @click="b++">Increase B</button>
+		</div>
+
+		<script src="index.js"></script>
+	</body>
+</html>
