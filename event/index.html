@@ -10,15 +10,17 @@
 		<div id="app">
 			<div v-on:mouseover="mouseCoordinates">
 				<h3>Click to increase !!!</h3>
-				<button v-on:click="handleIncrease">Increase</button>
+				<button v-on:click="handleIncrease">Increase 1</button>
+				<button v-on:click="value++">Increase 2</button>
 				<p>Value: {{ value }}</p>
+				<p>Value: {{ value > 20 ? 'Big' : 'Small' }}</p>
 
 				<p>
 					Mouse coordinates: {{ x }} / {{ y }}
 				</p>
-				<span v-on:mouseover.stop="">Stop Mouse Coordinates</span>
+				<span v-on:mouseover.stop="">Hover Here Stop Mouse Coordinates</span>
 
-				<div>
+				<div style="margin-top: 20px;">
 					<input type="text" @keyup.enter.space="handleKeyboard" />
 				</div>
 			</div>
