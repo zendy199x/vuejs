@@ -3,7 +3,8 @@ new Vue({
 	data: {
 		a: 0,
 		b: 0,
-	},
+    },
+    // computed thực hiện như một function nhưng nó chỉ được coi là 1 property
 	computed: {
 		increaseA: function () {
 			console.log("Call A: Computed")
