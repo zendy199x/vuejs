@@ -3,6 +3,7 @@ new Vue({
 	data: {
 		message: "Hello World",
 		body: "Training VueJS",
+		link: "https://www.facebook.com/zendy199x",
 	},
 	methods: {
 		sayHello: function () {
