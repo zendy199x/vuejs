@@ -15,8 +15,10 @@
 				:class="{red: handleChangeRedColor}"
 			></div>
 			<div class="square" :class="{red: handleChangeRedColor}"></div>
-			<div class="square"></div>
-			<div class="square"></div>
+			<!-- <div class="square" :class="color"></div> -->
+			<div class="square" :class="[color, {red: handleChangeRedColor}]"></div>
+			<hr />
+			<input type="text" v-model="color" />
 		</div>
 
 		<script src="index.js"></script>
