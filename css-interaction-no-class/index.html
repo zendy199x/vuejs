@@ -9,13 +9,16 @@
 	</head>
 	<body>
 		<div id="app">
+			<!-- no class -->
 			<div class="square" :style="{backgroundColor: color}"></div>
 			<div class="square" :style="customStyles"></div>
-			<div class="square"></div>
+
+			<!-- use array -->
+			<div class="square" :style="[customStyles, {height: width + 'px'}]"></div>
 			<hr />
 			<input type="text" v-model="color" />
 			<input type="text" v-model="width" />
-			<input type="text" v-model="height" />
+			<!-- <input type="text" v-model="height" /> -->
 		</div>
 
 		<script src="index.js"></script>
