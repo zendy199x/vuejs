@@ -8,9 +8,15 @@
 	</head>
 	<body>
 		<div id="app">
-			<h3>Click to increase !!!</h3>
-			<button v-on:click="handleIncrease">Increase</button>
-			<p>Value: {{ value }}</p>
+			<div v-on:mouseover="mouseCoordinates">
+				<h3>Click to increase !!!</h3>
+				<button v-on:click="handleIncrease">Increase</button>
+				<p>Value: {{ value }}</p>
+
+				<p>
+					Mouse coordinates: {{ x }} / {{ y }}
+				</p>
+			</div>
 		</div>
 
 		<script src="index.js"></script>
