@@ -15,8 +15,12 @@
 
 				<p>
 					Mouse coordinates: {{ x }} / {{ y }}
-                </p>
-                <span v-on:mouseover.stop="">Stop Mouse Coordinates</span>
+				</p>
+				<span v-on:mouseover.stop="">Stop Mouse Coordinates</span>
+
+				<div>
+					<input type="text" @keyup.enter.space="handleKeyboard" />
+				</div>
 			</div>
 		</div>
 

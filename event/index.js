@@ -13,5 +13,8 @@ new Vue({
 			this.x = event.clientX
 			this.y = event.clientY
 		},
+		handleKeyboard: function () {
+			alert("Handle Keyboard")
+		},
 	},
 })
