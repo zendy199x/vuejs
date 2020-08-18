@@ -16,6 +16,11 @@
 			<ul>
 				<li v-for="(menu, i) in menus">{{ i }}.{{ menu }}</li>
 			</ul>
+
+			<template v-for="(menu, i) in menus">
+				<h3>{{ i }}</h3>
+				<p>{{ menu }}</p>
+			</template>
 		</div>
 
 		<script src="index.js"></script>
