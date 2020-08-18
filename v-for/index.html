@@ -11,6 +11,11 @@
 			<ul>
 				<li v-for="menu in menus">{{ menu }}</li>
 			</ul>
+
+			<!-- for(let i = 0; i < menus.length; i++) -->
+			<ul>
+				<li v-for="(menu, i) in menus">{{ i }}.{{ menu }}</li>
+			</ul>
 		</div>
 
 		<script src="index.js"></script>
