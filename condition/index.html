@@ -12,7 +12,6 @@
 			<p v-if="isActive">Yes</p>
 			<p v-else>No</p>
 			<button @click="isActive = !isActive">Change Status</button>
-
 			<template v-if="isActive">
 				<ul>Menu 1</ul>
 				<ul>Menu 2</ul>
@@ -20,6 +19,8 @@
 				<ul>Menu 4</ul>
 				<ul>Menu 5</ul>
 			</template>
+
+			<p v-show="isActive">Hide in Element</p>
 		</div>
 
 		<script src="index.js"></script>
