@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Condition</title>
+		<script src="vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h3>Condition</h3>
+			<p v-if="isActive">Yes</p>
+			<p v-else>No</p>
+			<button @click="isActive = !isActive">Change Status</button>
+		</div>
+
+		<script src="index.js"></script>
+	</body>
+</html>
