@@ -21,6 +21,13 @@
 				<h3>{{ i }}</h3>
 				<p>{{ menu }}</p>
 			</template>
+
+			<ul v-for="student in students">
+				<li>{{ student.age }}</li>
+				<div v-for="(value, key, index) in student">
+					{{index}}. {{key}}: {{value}}
+				</div>
+			</ul>
 		</div>
 
 		<script src="index.js"></script>
