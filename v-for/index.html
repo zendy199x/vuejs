@@ -14,7 +14,7 @@
 
 			<!-- for(let i = 0; i < menus.length; i++) -->
 			<ul>
-				<li v-for="(menu, i) in menus">{{ i }}.{{ menu }}</li>
+				<li v-for="(menu, i) in menus" :key="index">{{ i }}.{{ menu }}</li>
 			</ul>
 
 			<template v-for="(menu, i) in menus">
@@ -33,6 +33,8 @@
 			<ul v-for="n in 10">
 				<li>{{n}}</li>
 			</ul>
+
+			<button @click="menus.push('test')">Add to menus</button>
 		</div>
 
 		<script src="index.js"></script>
