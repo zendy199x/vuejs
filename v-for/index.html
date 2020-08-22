@@ -24,9 +24,14 @@
 
 			<ul v-for="student in students">
 				<li>{{ student.age }}</li>
+
 				<div v-for="(value, key, index) in student">
 					{{index}}. {{key}}: {{value}}
 				</div>
+			</ul>
+
+			<ul v-for="n in 10">
+				<li>{{n}}</li>
 			</ul>
 		</div>
 
