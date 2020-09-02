@@ -4,7 +4,7 @@ new Vue({
 		playerHealth: 100,
 		monsterHealth: 100,
 		gameIsRunning: false,
-		turn: [],
+		turns: [],
 	},
 	methods: {
 		startNewGame: function () {

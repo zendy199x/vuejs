@@ -12,12 +12,12 @@
 			<section class="row">
 				<div class="small-6 columns">
 					<h1 class="text-center">YOU</h1>
-					<img src="img/chibi.png" alt="" style="height: 500px; width: 100%;" />
+					<img src="img/chibi.png" alt="" style="height: 500px; width: 100%" />
 
 					<div class="healthbar">
 						<div
 							class="healthbar text-center"
-							style="background-color: red; margin: 0; color: white;"
+							style="background-color: red; margin: 0; color: white"
 							:style="{ width: playerHealth + '%'}"
 						>
 							{{ playerHealth }}
@@ -29,13 +29,13 @@
 					<img
 						src="img/monster.png"
 						alt=""
-						style="height: 500px; width: 100%;"
+						style="height: 500px; width: 100%"
 					/>
 
 					<div class="healthbar">
 						<div
 							class="healthbar text-center"
-							style="background-color: red; margin: 0; color: white;"
+							style="background-color: red; margin: 0; color: white"
 							:style="{ width: monsterHealth + '%'}"
 						>
 							{{ monsterHealth }}
@@ -51,15 +51,17 @@
 			<section class="row controls" v-else="">
 				<div class="small-12 columns">
 					<button id="attack" @click="attack">ATTACK</button>
-					<button id="special-attack" @click="specialAttack">SPECIAL ATTACK</button>
+					<button id="special-attack" @click="specialAttack">
+						SPECIAL ATTACK
+					</button>
 					<button id="heal" @click="heal">HEAL</button>
 					<button id="give-up" @click="giveUp">GIVE UP</button>
 				</div>
 			</section>
-			<section class="row log">
+			<section class="row log" v-if="turns.length > 0">
 				<div class="small-12 columns">
 					<ul>
-						<li></li>
+						<li v-for="turn in turns">{{ turn.textLog }}</li>
 					</ul>
 				</div>
 			</section>
