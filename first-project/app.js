@@ -35,7 +35,19 @@ new Vue({
 			//Player
 			this.monsterAttack()
 		},
-		heal: function () {},
+		heal: function () {
+			//Player
+			if (this.playerHealth > 70) {
+				return false
+			} else if (this.playerHealth <= 60) {
+				this.playerHealth += 10
+			} else {
+				this.playerHealth = 70
+			}
+
+			//Monster
+			this.monsterAttack()
+		},
 		giveUp: function () {},
 		monsterAttack: function () {
 			this.playerHealth -= this.inputDamage(5, 12)
