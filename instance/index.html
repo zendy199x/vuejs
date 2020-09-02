@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>VueJS Instance</title>
+		<script src="vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>{{ title }}</h1>
+			<h1>After computed: {{ lowerCaseTitle }}</h1>
+			<button @click="show">Show</button>
+			<p v-if="showParagraph">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis velit
+				harum dolores a dolorem ullam architecto eveniet incidunt doloremque
+				cupiditate deleniti repellendus assumenda aperiam ea, ex tempore atque
+				quos vel?
+			</p>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>
