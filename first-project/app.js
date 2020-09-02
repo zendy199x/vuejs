@@ -21,11 +21,26 @@ new Vue({
 			this.monsterHealth -= this.inputDamage(4, 10)
 
 			//Player
-			this.playerHealth -= this.inputDamage(5, 12)
+			this.monsterAttack()
 		},
-		specialAttack: function () {},
+		specialAttack: function () {
+			//Check option
+			if (this.checkPlayerOption()) {
+				return
+			}
+
+			//Monster
+			this.monsterHealth -= this.inputDamage(10, 20)
+
+			//Player
+			this.monsterAttack()
+		},
 		heal: function () {},
 		giveUp: function () {},
+		monsterAttack: function () {
+			this.playerHealth -= this.inputDamage(5, 12)
+			this.checkPlayerOption()
+		},
 		inputDamage: function (minDamage, maxDamage) {
 			return Math.max(Math.floor(Math.random() * maxDamage) + 1, minDamage)
 		},
