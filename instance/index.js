@@ -24,3 +24,11 @@ new Vue({
 		},
 	},
 })
+
+
+new Vue({
+	el: "#app-2",
+	data: {
+		title: "The Second VueJS Instance",
+	},
+})
