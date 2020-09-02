@@ -11,6 +11,7 @@ new Vue({
 			this.gameIsRunning = true
 			this.playerHealth = 100
 			this.monsterHealth = 100
+			turns: []
 		},
 		attack: function () {
 			//Check option
@@ -55,12 +56,19 @@ new Vue({
 			} else {
 				this.playerHealth = 70
 			}
+			this.turns.unshift({
+				isPlayer: true,
+				textLog: "Player heals for 10",
+			})
 
 			//Monster
 			this.monsterAttack()
 		},
 		giveUp: function () {
 			this.gameIsRunning = false
+			this.turns = []
+			this.playerHealth = 100
+			this.monsterHealth = 100
 			alert("You lost")
 		},
 		monsterAttack: function () {
