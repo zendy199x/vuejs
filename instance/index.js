@@ -1,9 +1,11 @@
+var data = {
+	title: "The VueJS Instance",
+	showParagraph: false,
+}
+
 var app1 = new Vue({
 	el: "#app",
-	data: {
-		title: "The VueJS Instance",
-		showParagraph: false,
-	},
+	data: data,
 	methods: {
 		show: function () {
 			this.showParagraph = true
@@ -38,3 +40,8 @@ var app2 = new Vue({
 })
 
 setTimeout(() => (app1.title = "Change SetTimeout"), 3000)
+
+app1.newProps = "New Value !!!"
+console.log(app1)
+console.log(app1.$data.title)
+
