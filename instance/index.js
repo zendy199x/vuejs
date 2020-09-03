@@ -1,4 +1,4 @@
-new Vue({
+var app1 = new Vue({
 	el: "#app",
 	data: {
 		title: "The VueJS Instance",
@@ -25,10 +25,16 @@ new Vue({
 	},
 })
 
-
-new Vue({
+var app2 = new Vue({
 	el: "#app-2",
 	data: {
 		title: "The Second VueJS Instance",
 	},
+	methods: {
+		onChangeTitle: function () {
+			app1.title = "Changed !!!"
+		},
+	},
 })
+
+setTimeout(() => (app1.title = "Change SetTimeout"), 3000)
