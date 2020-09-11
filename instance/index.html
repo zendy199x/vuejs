@@ -8,9 +8,9 @@
 	</head>
 	<body>
 		<div id="app">
-			<h1>{{ title }}</h1>
+			<h1 ref="infoHeading">{{ title }}</h1>
 			<h1>After computed: {{ lowerCaseTitle }}</h1>
-			<button @click="show">Show</button>
+			<button @click="show" ref="infoButton">Show</button>
 			<p v-if="showParagraph">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis velit
 				harum dolores a dolorem ullam architecto eveniet incidunt doloremque

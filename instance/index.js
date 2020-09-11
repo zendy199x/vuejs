@@ -10,6 +10,8 @@ var app1 = new Vue({
 		show: function () {
 			this.showParagraph = true
 			this.updateTitle("This VueJS Instance (Updated)")
+			console.log(this.$refs)
+			this.$refs.infoButton.innerText = "Show after using refs"
 		},
 		updateTitle: function (title) {
 			this.title = title
@@ -42,6 +44,8 @@ var app2 = new Vue({
 setTimeout(() => (app1.title = "Change SetTimeout"), 3000)
 
 app1.newProps = "New Value !!!"
-console.log(app1)
-console.log(app1.$data.title)
+app1.$refs.infoHeading.innerText = "Text using Refs with Heading"
 
+console.log(app1)
+console.log(app1.title)
+console.log(app1.$data.title)
