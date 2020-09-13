@@ -8,7 +8,6 @@ var data = {
 }
 
 var app1 = new Vue({
-	el: "#app",
 	data: data,
 	methods: {
 		show: function () {
@@ -44,6 +43,8 @@ var app2 = new Vue({
 		},
 	},
 })
+
+app1.$mount('#app')
 
 setTimeout(() => (app1.title = "Change SetTimeout"), 3000)
 
