@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Component</title>
+		<script src="vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1 ref="infoHeading">{{ title }}</h1>
+			<h1>After computed: {{ lowerCaseTitle }}</h1>
+			<button @click="show" ref="infoButton">Show</button>
+			<p v-if="showParagraph">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis velit
+				harum dolores a dolorem ullam architecto eveniet incidunt doloremque
+				cupiditate deleniti repellendus assumenda aperiam ea, ex tempore atque
+				quos vel?
+			</p>
+		</div>
+
+		<div id="app-2">
+			<h1>{{ title }}</h1>
+			<button @click="onChangeTitle">Change something app 1</button>
+			<hello></hello>
+		</div>
+
+		<div id="appHello"></div>
+
+		<hello></hello>
+
+		<script src="index.js"></script>
+	</body>
+</html>
