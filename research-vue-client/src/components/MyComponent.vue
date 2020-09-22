@@ -10,7 +10,7 @@
 // 	test: "VueJS",
 // }
 export default {
-	name: "my-component",
+  name: "my-component",
 	data() {
 		return {
 			test: "VueJS", // change unique

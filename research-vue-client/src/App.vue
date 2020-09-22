@@ -1,10 +1,20 @@
 <template>
 	<div id="app">
-		<MyComponent></MyComponent>
-		<MyComponent></MyComponent>
-		<MyComponent></MyComponent>
-		<MyComponent></MyComponent>
-		<MyComponent></MyComponent>
+		<div id="app-1">
+			<MyComponent></MyComponent>
+			<MyComponent></MyComponent>
+			<MyComponent></MyComponent>
+			<MyComponent></MyComponent>
+			<MyComponent></MyComponent>
+		</div>
+
+		<div id="app-2">
+			<MyComponent></MyComponent>
+			<MyComponent></MyComponent>
+			<MyComponent></MyComponent>
+			<MyComponent></MyComponent>
+			<MyComponent></MyComponent>
+		</div>
 	</div>
 </template>
 
