@@ -1,5 +1,8 @@
 <template>
-	<h1>Hello: {{ test }}</h1>
+	<div>
+		<h1>Hello: {{ test }}</h1>
+		<contact-component></contact-component>
+	</div>
 </template>
 
 <script>
