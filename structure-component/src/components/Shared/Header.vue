@@ -10,4 +10,8 @@
 
 <script></script>
 
-<style></style>
+<style>
+div {
+	background: yellow;
+}
+</style>
