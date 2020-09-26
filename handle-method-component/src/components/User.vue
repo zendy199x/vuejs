@@ -6,7 +6,10 @@
 		<hr />
 		<div class="row">
 			<div class="col-xs-12 col-sm-6">
-				<app-user-detail :customName="name"></app-user-detail>
+				<app-user-detail
+					:customName="name"
+					@nameWasReset="name = $event"
+				></app-user-detail>
 			</div>
 			<div class="col-xs-12 col-sm-6">
 				<app-user-edit></app-user-edit>
@@ -24,12 +27,12 @@ export default {
 		return {
 			name: "Zendy",
 		}
-  },
-  methods: {
-    changeName() {
-      this.name = "Duc Nguyen"
-    }
-  },
+	},
+	methods: {
+		changeName() {
+			this.name = "Duc Nguyen"
+		},
+	},
 	components: {
 		appUserDetail: UserDetail,
 		appUserEdit: UserEdit,

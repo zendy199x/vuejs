@@ -3,6 +3,7 @@
 		<h3>Infomation User Details</h3>
 		<p>List Details</p>
 		<p>My Name: {{ reverseName() }}</p>
+		<button @click="resetName">Reset Name</button>
 	</div>
 </template>
 
@@ -24,6 +25,10 @@ export default {
 				.split("")
 				.reverse()
 				.join("")
+		},
+		resetName() {
+			this.customName = "Zendy"
+			this.$emit("nameWasReset", this.customName)
 		},
 	},
 }
