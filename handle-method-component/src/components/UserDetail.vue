@@ -8,7 +8,16 @@
 
 <script>
 export default {
-	props: ["customName"],
+	props: {
+		customName: {
+			type: String,
+			default: "Zendy",
+			// default: function() {
+			// 	return "Zendy"
+			// },
+			// required: true,
+		},
+	},
 	methods: {
 		reverseName() {
 			return this.customName
