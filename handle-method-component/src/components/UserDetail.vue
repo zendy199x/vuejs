@@ -3,7 +3,10 @@
 		<h3>Infomation User Details</h3>
 		<p>List Details</p>
 		<p>My Name: {{ reverseName() }}</p>
+		<p>My Age: {{ userAge }}</p>
+
 		<button @click="resetName">Reset Name</button>
+		<button @click="resetNameFunc()">Reset case: Call back</button>
 	</div>
 </template>
 
@@ -18,6 +21,8 @@ export default {
 			// },
 			// required: true,
 		},
+		resetNameFunc: Function,
+		userAge: Number,
 	},
 	methods: {
 		reverseName() {

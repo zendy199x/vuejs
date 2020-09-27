@@ -1,7 +1,7 @@
 <template>
 	<div class="component">
 		<h1>The User Component</h1>
-		<p>I'm a Software Developer ! I'm {{ name }}</p>
+		<p>I'm a Software Developer ! I'm {{ name }} and {{ age }} years old</p>
 		<button @click="changeName">Change Name</button>
 		<hr />
 		<div class="row">
@@ -9,10 +9,15 @@
 				<app-user-detail
 					:customName="name"
 					@nameWasReset="name = $event"
+					:resetNameFunc="resetName"
+					:userAge="age"
 				></app-user-detail>
 			</div>
 			<div class="col-xs-12 col-sm-6">
-				<app-user-edit></app-user-edit>
+				<app-user-edit
+					:userAge="age"
+					@ageWasEdit="age = $event"
+				></app-user-edit>
 			</div>
 		</div>
 	</div>
@@ -26,11 +31,15 @@ export default {
 	data: function() {
 		return {
 			name: "Zendy",
+			age: 18,
 		}
 	},
 	methods: {
 		changeName() {
 			this.name = "Duc Nguyen"
+		},
+		resetName() {
+			this.name = "Zendy"
 		},
 	},
 	components: {
