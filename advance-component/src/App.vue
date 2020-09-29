@@ -6,6 +6,8 @@
 					<Card cardWords="Car">
 						<h2 slot="title">{{ cardTitle }}</h2>
 						<p slot="content">So pretty</p>
+
+            <p>Default Slot</p>
 					</Card>
 				</div>
 			</div>
