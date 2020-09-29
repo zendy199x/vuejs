@@ -2,6 +2,7 @@
 	<div>
 		<h2>{{ cardWords }}</h2>
 		<p>This is my car !</p>
+    <slot></slot>
 	</div>
 </template>
 
