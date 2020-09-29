@@ -1,7 +1,14 @@
 <template>
 	<div>
 		<h1>{{ cardWords }}</h1>
-		<slot></slot>
+
+		<div class="title">
+			<slot name="title"></slot>
+		</div>
+
+		<div class="content">
+			<slot name="content"></slot>
+		</div>
 	</div>
 </template>
 
@@ -20,7 +27,12 @@ div {
 	margin: 20px auto;
 	text-align: center;
 }
+
 h2 {
 	color: red;
+}
+
+.title {
+	font-style: italic;
 }
 </style>

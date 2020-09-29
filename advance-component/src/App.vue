@@ -4,8 +4,8 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<Card cardWords="Car">
-						<h2>{{ cardTitle }}</h2>
-						<p>So pretty</p>
+						<h2 slot="title">{{ cardTitle }}</h2>
+						<p slot="content">So pretty</p>
 					</Card>
 				</div>
 			</div>
