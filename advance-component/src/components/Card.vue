@@ -1,8 +1,7 @@
 <template>
 	<div>
-		<h2>{{ cardWords }}</h2>
-		<p>This is my car !</p>
-    <slot></slot>
+		<h1>{{ cardWords }}</h1>
+		<slot></slot>
 	</div>
 </template>
 
@@ -20,5 +19,8 @@ div {
 	padding: 30px;
 	margin: 20px auto;
 	text-align: center;
+}
+h2 {
+	color: red;
 }
 </style>
