@@ -25,8 +25,11 @@
 					</button>
 				</div>
 			</div>
+
 			<div class="col-sm-12">
-				<component :is="selectedComponent"></component>
+				<keep-alive>
+					<component :is="selectedComponent"></component>
+				</keep-alive>
 			</div>
 		</div>
 	</div>
