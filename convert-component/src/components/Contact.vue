@@ -13,8 +13,17 @@ export default {
 			counter: 0,
 		}
 	},
+	created() {
+		console.log("Created Contact")
+	},
 	destroyed() {
-		console.log("Destroyed")
+		console.log("Destroyed Contact")
+	},
+	deactivated() {
+		console.log("Deactivated Contact Component")
+	},
+	activated() {
+		console.log("Activated Contact Component")
 	},
 }
 </script>

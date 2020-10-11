@@ -4,6 +4,15 @@
 	</div>
 </template>
 
-<script></script>
+<script>
+export default {
+	deactivated() {
+		console.log("Deactivated About Component")
+	},
+	activated() {
+		console.log("Activated About Component")
+	},
+}
+</script>
 
 <style scoped></style>
