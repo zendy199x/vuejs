@@ -12,7 +12,7 @@
 export default {}
 </script>
 
-<style lang="scss">
+<style>
 .card-body {
 	font-family: "Arizonia", cursive;
 	font-size: 24px;
@@ -24,6 +24,6 @@ export default {}
 }
 
 .item:hover {
-	background-color: $ffe2e2;
+	background-color: #ffe2e2;
 }
 </style>
