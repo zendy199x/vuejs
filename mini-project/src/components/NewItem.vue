@@ -1,20 +1,26 @@
 <template>
 	<div class="row">
 		<form>
-			<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
-				<label for="">You can saying...</label>
-				<textarea
-					class="form-group"
-					v-model="item"
-					name=""
-					id=""
-					cols="30"
-					row="10"
-				></textarea>
+			<div class="row">
+				<div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 form-group">
+					<label for="">You can saying...</label>
+					<textarea
+						class="form-group"
+						v-model="item"
+						name=""
+						id=""
+						cols="30"
+						row="10"
+					></textarea>
+				</div>
 			</div>
 
-			<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
-				<button class="btn btn-success" @click.prevent="createNew">Add</button>
+			<div class="row">
+				<div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 form-group">
+					<button class="btn btn-success" @click.prevent="createNew">
+						Add
+					</button>
+				</div>
 			</div>
 		</form>
 	</div>
@@ -27,7 +33,22 @@ export default {
 			item: "",
 		}
 	},
+	methods: {
+		createNew() {
+			this.$emit("itemAdd", this.item)
+			this.item = ""
+		},
+	},
 }
 </script>
 
-<style></style>
+<style scoped>
+textarea {
+	width: 100%;
+	resize: none;
+}
+
+form {
+  width: 100%;
+}
+</style>

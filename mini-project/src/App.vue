@@ -1,21 +1,29 @@
 <template>
 	<div id="app">
+		<NewItem @itemAdd="addItem"></NewItem>
 		<ItemsLayout :items="items"></ItemsLayout>
 	</div>
 </template>
 
 <script>
 import ItemsLayout from "./components/ItemsLayout.vue"
+import NewItem from "./components/NewItem.vue"
 
 export default {
 	data: function() {
 		return {
-			items: ["Zendy", "Duc Nguyen"],
+			items: [],
 			maxItems: 10,
 		}
 	},
 	components: {
 		ItemsLayout,
+		NewItem,
+	},
+	methods: {
+		addItem(item) {
+			this.items.push(item)
+		},
 	},
 }
 </script>
