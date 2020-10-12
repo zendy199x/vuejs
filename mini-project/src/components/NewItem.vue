@@ -35,6 +35,9 @@ export default {
 	},
 	methods: {
 		createNew() {
+			if (this.item == "") return false
+
+			// if item !== ""
 			this.$emit("itemAdd", this.item)
 			this.item = ""
 		},
@@ -49,6 +52,6 @@ textarea {
 }
 
 form {
-  width: 100%;
+	width: 100%;
 }
 </style>

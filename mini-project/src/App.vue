@@ -2,6 +2,13 @@
 	<div id="app">
 		<NewItem @itemAdd="addItem"></NewItem>
 		<ItemsLayout :items="items"></ItemsLayout>
+		<div class="row mt-3">
+			<div class="col-sm-12 text-center">
+				<div class="alert alert-info">
+					Info Click on a Item to delete it !!!
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
