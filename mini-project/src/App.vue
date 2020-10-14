@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
 		<NewItem @itemAdd="addItem"></NewItem>
-		<ItemsLayout :items="items"></ItemsLayout>
+		<ItemsLayout :items="items" @itemRemove="removeItem"></ItemsLayout>
 		<div class="row mt-3">
 			<div class="col-sm-12 text-center">
 				<div class="alert alert-info">
@@ -30,6 +30,9 @@ export default {
 	methods: {
 		addItem(item) {
 			this.items.push(item)
+		},
+		removeItem(index) {
+			this.items.splice(index, 1)
 		},
 	},
 }
