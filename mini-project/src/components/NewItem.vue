@@ -28,6 +28,7 @@
 
 <script>
 export default {
+	props: ["items"],
 	data: function() {
 		return {
 			item: "",
@@ -36,6 +37,9 @@ export default {
 	methods: {
 		createNew() {
 			if (this.item == "") return false
+
+			if (this.items.includes(this.item.toLowerCase()))
+				return alert("This item is existed in card!")
 
 			// if item !== ""
 			this.$emit("itemAdd", this.item)

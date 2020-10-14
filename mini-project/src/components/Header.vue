@@ -5,7 +5,7 @@
 			<div class="progress">
 				<div
 					class="progress-bar bg-success"
-					style="{width: (itemCount/maxItem) * 100 + '%}"
+					:style="{width: (itemCount/maxItem) * 100 + '%'}"
 				></div>
 				<span>{{ itemCount }} / {{ maxItem }}</span>
 			</div>

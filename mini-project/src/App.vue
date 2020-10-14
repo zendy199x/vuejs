@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
-		<Header></Header>
-		<NewItem @itemAdd="addItem"></NewItem>
+		<Header :itemCount="items.length" :maxItem="maxItems"></Header>
+		<NewItem @itemAdd="addItem" :items="items"></NewItem>
 		<ItemsLayout :items="items" @itemRemove="removeItem"></ItemsLayout>
 		<div class="row mt-3">
 			<div class="col-sm-12 text-center">
@@ -32,6 +32,9 @@ export default {
 	},
 	methods: {
 		addItem(item) {
+			if (this.items.length >= this.maxItems) {
+				return alert("Please remove item first")
+			}
 			this.items.push(item)
 		},
 		removeItem(index) {
