@@ -1,5 +1,6 @@
 <template>
 	<div id="app">
+		<Header></Header>
 		<NewItem @itemAdd="addItem"></NewItem>
 		<ItemsLayout :items="items" @itemRemove="removeItem"></ItemsLayout>
 		<div class="row mt-3">
@@ -13,6 +14,7 @@
 </template>
 
 <script>
+import Header from "./components/Header.vue"
 import ItemsLayout from "./components/ItemsLayout.vue"
 import NewItem from "./components/NewItem.vue"
 
@@ -24,6 +26,7 @@ export default {
 		}
 	},
 	components: {
+		Header,
 		ItemsLayout,
 		NewItem,
 	},
