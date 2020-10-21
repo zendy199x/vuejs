@@ -91,10 +91,11 @@
 					class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group"
 				>
 					<label for="male">
-						<input type="radio" id="male" value="Male" /> Male
+						<input type="radio" id="male" value="Male" v-model="gender" /> Male
 					</label>
 					<label for="female">
-						<input type="radio" id="female" value="Female" /> Female
+						<input type="radio" id="female" value="Female" v-model="gender" />
+						Female
 					</label>
 				</div>
 			</div>
@@ -133,7 +134,7 @@
 						<ul>
 							<li v-for="item in sendEmail" :key="item">{{ item }}</li>
 						</ul>
-						<p>Gender:</p>
+						<p>Gender: {{ gender }}</p>
 						<p>Priority:</p>
 						<p>Switched:</p>
 					</div>
@@ -154,6 +155,7 @@ export default {
 			},
 			message: "Please hold text something...",
 			sendEmail: [],
+			gender: "Male",
 		}
 	},
 }
