@@ -13,7 +13,8 @@
 							type="text"
 							id="email"
 							class="form-control"
-							v-model.lazy="userData.email"
+							:value="userData.email"
+							@input="userData.email = $event.target.value"
 						/>
 						<p>{{ userData.email }}</p>
 					</div>
