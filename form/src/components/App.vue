@@ -105,7 +105,12 @@
 				>
 					<label for="priority">Priority</label>
 					<select id="priority" class="form-control">
-						<option></option>
+						<option
+							v-for="item in level"
+							:key="item"
+							:selected="item === 'Low'"
+							>{{ item }}</option
+						>
 					</select>
 				</div>
 			</div>
@@ -156,6 +161,7 @@ export default {
 			message: "Please hold text something...",
 			sendEmail: [],
 			gender: "Male",
+			level: ["Hight", "Medium", "Low"],
 		}
 	},
 }
