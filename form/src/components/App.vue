@@ -57,11 +57,31 @@
 				>
 					<div class="form-group">
 						<label for="sendmail">
-							<input type="checkbox" id="sendmail" value="SendMail" /> Send Mail
+							<input
+								type="checkbox"
+								id="sendmail"
+								value="SendMail"
+								v-model="sendEmail"
+							/>
+							Send Mail
 						</label>
 						<label for="sendInfomail">
-							<input type="checkbox" id="sendInfomail" value="SendInfoMail" />
+							<input
+								type="checkbox"
+								id="sendInfomail"
+								value="SendInfoMail"
+								v-model="sendEmail"
+							/>
 							Send Infomail
+						</label>
+						<label for="cutMail">
+							<input
+								type="checkbox"
+								id="cutMail"
+								value="cutMail"
+								v-model="sendEmail"
+							/>
+							Cut Mail
 						</label>
 					</div>
 				</div>
@@ -111,7 +131,7 @@
 						<p style="white-space: pre">Message: {{ message }}</p>
 						<p><strong>Send Mail?</strong></p>
 						<ul>
-							<li></li>
+							<li v-for="item in sendEmail" :key="item">{{ item }}</li>
 						</ul>
 						<p>Gender:</p>
 						<p>Priority:</p>
@@ -133,6 +153,7 @@ export default {
 				age: 0,
 			},
 			message: "Please hold text something...",
+			sendEmail: [],
 		}
 	},
 }
