@@ -13,8 +13,9 @@
 							type="text"
 							id="email"
 							class="form-control"
-							v-model="userData.email"
+							v-model.lazy="userData.email"
 						/>
+						<p>{{ userData.email }}</p>
 					</div>
 					<div class="form-group">
 						<label for="password">Password</label>
