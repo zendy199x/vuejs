@@ -61,7 +61,7 @@
 							<input
 								type="checkbox"
 								id="sendmail"
-								value="SendMail"
+								value="Send Mail"
 								v-model="sendEmail"
 							/>
 							Send Mail
@@ -70,16 +70,16 @@
 							<input
 								type="checkbox"
 								id="sendInfomail"
-								value="SendInfoMail"
+								value="Send Info Mail"
 								v-model="sendEmail"
 							/>
-							Send Infomail
+							Send Info Mail
 						</label>
 						<label for="cutMail">
 							<input
 								type="checkbox"
 								id="cutMail"
-								value="cutMail"
+								value="Cut Mail"
 								v-model="sendEmail"
 							/>
 							Cut Mail
@@ -118,6 +118,15 @@
 			<hr />
 			<div class="row">
 				<div
+					class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group"
+				>
+					<label for="message">Switched:</label><br />
+					<CustomControl v-model="dataSwitch"></CustomControl>
+				</div>
+			</div>
+
+			<div class="row">
+				<div
 					class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"
 				>
 					<button class="btn btn-primary">Submit!</button>
@@ -142,7 +151,7 @@
 						</ul>
 						<p>Gender: {{ gender }}</p>
 						<p>Priority:</p>
-						<p>Switched:</p>
+						<p>Switched: {{ dataSwitch }}</p>
 					</div>
 				</div>
 			</div>
@@ -151,6 +160,8 @@
 </template>
 
 <script>
+import CustomControl from "./components/CustomControl"
+
 export default {
 	data() {
 		return {
@@ -163,7 +174,11 @@ export default {
 			sendEmail: [],
 			gender: "Male",
 			level: ["Hight", "Medium", "Low"],
+			dataSwitch: true,
 		}
+	},
+	components: {
+		CustomControl,
 	},
 }
 </script>
