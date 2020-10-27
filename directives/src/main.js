@@ -5,11 +5,17 @@ Vue.config.productionTip = false
 
 Vue.directive("custom", {
 	bind(el, binding) {
-		if (binding.arg === "background") {
-			el.style.backgroundColor = binding.value
-		} else {
-			el.style.color = binding.value
+		let delay = 0
+		if (binding.modifiers["delayed"]) {
+			delay = 3000
 		}
+		setTimeout(() => {
+			if (binding.arg === "background") {
+				el.style.backgroundColor = binding.value
+			} else {
+				el.style.color = binding.value
+			}
+		}, delay)
 	},
 })
 
