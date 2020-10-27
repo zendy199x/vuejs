@@ -3,9 +3,13 @@ import App from "./App.vue"
 
 Vue.config.productionTip = false
 
-Vue.directive("bgcolor", {
+Vue.directive("custom", {
 	bind(el, binding) {
-		el.style.backgroundColor = binding.value
+		if (binding.arg === "background") {
+			el.style.backgroundColor = binding.value
+		} else {
+			el.style.color = binding.value
+		}
 	},
 })
 
