@@ -3,9 +3,9 @@ import App from "./App.vue"
 
 Vue.config.productionTip = false
 
-Vue.directive("highlight", {
-	bind(el           ) {
-		el.style.backgroundColor = "yellow"
+Vue.directive("bgcolor", {
+	bind(el, binding) {
+		el.style.backgroundColor = binding.value
 	},
 })
 
