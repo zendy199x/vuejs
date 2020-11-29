@@ -12,7 +12,7 @@
         <br />
         <br />
 
-        <transition>
+        <transition name="fade">
           <div class="alert alert-success" v-if="show">
             This is something notification
           </div>
@@ -32,4 +32,18 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+/* enter */
+.fade-enter {
+}
+
+.fade-enter-active {
+}
+
+/* leave */
+.fade-leave {
+}
+
+.fade-leave-active {
+}
+</style>
