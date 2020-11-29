@@ -17,20 +17,10 @@
 </template>
 
 <script>
+import { productMixin } from "./../mixins/productMixin";
+
 export default {
-  data() {
-    return {
-      products: ["Apple", "Samsung", "HTC", "Nokia", "Huawei", "Oppo"],
-      filterProduct: "",
-    };
-  },
-  computed: {
-    filteredProduct() {
-      return this.products.filter((el) =>
-        el.toLowerCase().includes(this.filterProduct.toLowerCase())
-      ); // can use includes prototype
-    },
-  },
+  mixins: [productMixin],
 };
 </script>
 

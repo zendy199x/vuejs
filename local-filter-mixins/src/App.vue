@@ -24,17 +24,19 @@
 </template>
 
 <script>
+import { productMixin } from "./mixins/productMixin";
 import List from "./components/List.vue";
 
 export default {
   components: {
     List,
   },
+  mixins: [productMixin],
   data() {
     return {
       text: "Hello everywhere, VueJS",
-      products: ["Apple", "Samsung", "HTC", "Nokia", "Huawei", "Oppo"],
-      filterProduct: "",
+      // products: ["Apple", "Samsung", "HTC", "Nokia", "Huawei", "Oppo"],
+      // filterProduct: "",
     };
   },
   filters: {
@@ -42,13 +44,13 @@ export default {
       return text.toLowerCase();
     },
   },
-  computed: {
-    filteredProduct() {
-      return this.products.filter((el) =>
-        el.toLowerCase().match(this.filterProduct.toLowerCase())
-      ); // can use includes prototype
-    },
-  },
+  // computed: {
+  //   filteredProduct() {
+  //     return this.products.filter((el) =>
+  //       el.toLowerCase().match(this.filterProduct.toLowerCase())
+  //     ); // can use includes prototype
+  //   },
+  // },
 };
 </script>
 
