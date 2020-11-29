@@ -12,4 +12,7 @@ export const productMixin = {
       );
     },
   },
+  created() {
+    console.log("created from mixins");
+  },
 };

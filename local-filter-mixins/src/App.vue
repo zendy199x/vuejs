@@ -31,6 +31,9 @@ export default {
   components: {
     List,
   },
+  created() {
+    console.log("created App");
+  },
   mixins: [productMixin],
   data() {
     return {

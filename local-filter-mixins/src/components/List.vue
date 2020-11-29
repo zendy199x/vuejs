@@ -20,6 +20,9 @@
 import { productMixin } from "./../mixins/productMixin";
 
 export default {
+  created() {
+    console.log("created List");
+  },
   mixins: [productMixin],
 };
 </script>
