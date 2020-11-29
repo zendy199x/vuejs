@@ -17,6 +17,12 @@
             This is something notification
           </div>
         </transition>
+
+        <transition name="slide">
+          <div class="alert alert-warning" v-if="show">
+            This is something notification
+          </div>
+        </transition>
       </div>
     </div>
   </div>
@@ -50,5 +56,46 @@ export default {
 .fade-leave-active {
   transition: opacity 1s ease-out;
   opacity: 0;
+}
+
+/* Slide transition effect */
+/* enter */
+.slide-enter {
+  opacity: 0;
+}
+
+.slide-enter-active {
+  transition: opacity 1s ease-out;
+  animation: slide-in 1s ease-in-out forwards;
+}
+
+/* leave */
+.slide-leave {
+  opacity: 1;
+}
+
+.slide-leave-active {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  animation: slide-out 1s ease-in forwards;
+}
+
+/* key-frames */
+@keyframes slide-in {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
 }
 </style>
