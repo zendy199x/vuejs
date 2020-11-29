@@ -3,7 +3,7 @@ import App from "./App.vue";
 
 Vue.config.productionTip = false;
 
-Vue.filter("to-uppercase", function(val) {
+Vue.filter("toUpperCase", function(val) {
   return val.toUpperCase();
 });
 
