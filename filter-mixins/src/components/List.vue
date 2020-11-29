@@ -2,6 +2,12 @@
   <div class="row">
     <div class="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3">
       <h3>Filter Products From List Component</h3>
+      <button
+        class="btn btn-block btn-danger mb-md-3"
+        @click="products.push('Mixins')"
+      >
+        Add New Item
+      </button>
       <input type="text" class="form-control mb-md-3" v-model="filterProduct" />
       <div class="card">
         <div class="card-body">

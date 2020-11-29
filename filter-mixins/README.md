@@ -1,4 +1,4 @@
-# local-filter-mixins
+# filter-mixins
 
 ## Project setup
 ```

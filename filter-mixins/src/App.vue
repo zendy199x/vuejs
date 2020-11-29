@@ -8,7 +8,18 @@
     </div>
     <div class="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3">
       <h3>Filter Products</h3>
-      <input type="text" class="form-control mb-md-3" v-model="filterProduct" />
+      <button
+        class="btn btn-block btn-success mb-md-3"
+        @click="products.push('Mixins')"
+      >
+        Add New Item
+      </button>
+      <input
+        type="text"
+        class="form-control mb-md-3"
+        v-model="filterProduct"
+        placeholder="Search name product..."
+      />
       <div class="card">
         <div class="card-body">
           <ul>
