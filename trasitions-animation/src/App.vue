@@ -35,15 +35,20 @@ export default {
 <style>
 /* enter */
 .fade-enter {
+  opacity: 0;
 }
 
 .fade-enter-active {
+  transition: opacity 1s ease-in;
 }
 
 /* leave */
 .fade-leave {
+  opacity: 1;
 }
 
 .fade-leave-active {
+  transition: opacity 1s ease-out;
+  opacity: 0;
 }
 </style>
