@@ -57,6 +57,28 @@
             This is something notification danger
           </div>
         </transition>
+        <hr />
+
+        <button
+          class="btn btn-success btn-block mb-md-3"
+          @click="status = !status"
+        >
+          Add or Remove
+        </button>
+        <transition
+          @before-enter="beforeEnter"
+          @enter="enter"
+          @after-enter="afterEnter"
+          @enter-cancled="enterCancelled"
+          @before-leave="beforeLeave"
+          @leave="leave"
+          @after-leave="afterLeave"
+          @leave-cancelled="leaveCancelled"
+        >
+          <div class="style-main">
+            <div class="add-remove" v-if="status"></div>
+          </div>
+        </transition>
       </div>
     </div>
   </div>
@@ -67,13 +89,40 @@ export default {
   data() {
     return {
       show: true,
+      status: false,
       typeAnimation: "fade",
     };
+  },
+  methods: {
+    beforeEnter: () => {
+      console.log("beforeEnter");
+    },
+    enter() {
+      console.log("enter");
+    },
+    afterEnter() {
+      console.log("afterEnter");
+    },
+    afterCancelled() {
+      console.log("enterCancelled");
+    },
+    beforeLeave: () => {
+      console.log("beforeLeave");
+    },
+    leave() {
+      console.log("leave");
+    },
+    afterLeave() {
+      console.log("afterLeave");
+    },
+    leaveCancelled() {
+      console.log("LeaveCancelled");
+    },
   },
 };
 </script>
 
-<style>
+<style scoped>
 /* enter */
 .fade-enter {
   opacity: 0;
@@ -132,5 +181,17 @@ export default {
   to {
     transform: translateY(20px);
   }
+}
+
+.style-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.add-remove {
+  width: 200px;
+  height: 200px;
+  background: tomato;
 }
 </style>
