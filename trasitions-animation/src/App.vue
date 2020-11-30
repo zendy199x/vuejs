@@ -13,13 +13,20 @@
         <br />
 
         <transition name="fade">
-          <div class="alert alert-success" v-if="show">
+          <!-- <div class="alert alert-success" v-if="show"> -->
+          <div class="alert alert-success" v-show="show">
             This is something notification
           </div>
         </transition>
 
         <transition name="slide">
           <div class="alert alert-warning" v-if="show">
+            This is something notification
+          </div>
+        </transition>
+
+        <transition name="slide" appear>
+          <div class="alert alert-danger" v-if="show">
             This is something notification
           </div>
         </transition>
@@ -32,7 +39,7 @@
 export default {
   data() {
     return {
-      show: false,
+      show: true,
     };
   },
 };
