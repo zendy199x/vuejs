@@ -30,6 +30,18 @@
             This is something notification
           </div>
         </transition>
+
+        <transition
+          appear
+          enter-class=""
+          enter-active-class="animated bounceOutDown"
+          leave-class=""
+          leave-active-class="animated hinge"
+        >
+          <div class="alert alert-danger" v-if="show">
+            This is something notification
+          </div>
+        </transition>
       </div>
     </div>
   </div>
