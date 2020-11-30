@@ -6,13 +6,19 @@
       >
         <h1>Animations</h1>
         <hr />
+
+        <select v-model="typeAnimation" class="form-control mb-md-3">
+          <option value="fade">Fade</option>
+          <option value="slide">Slide</option>
+        </select>
+
         <button class="btn btn-block btn-success" @click="show = !show">
           Show Notification
         </button>
         <br />
         <br />
 
-        <transition name="fade">
+        <transition :name="typeAnimation">
           <!-- <div class="alert alert-success" v-if="show"> -->
           <div class="alert alert-success" v-show="show">
             This is something notification
@@ -52,6 +58,7 @@ export default {
   data() {
     return {
       show: true,
+      typeAnimation: "fade",
     };
   },
 };
