@@ -48,6 +48,15 @@
             This is something notification
           </div>
         </transition>
+
+        <transition :name="typeAnimation" mode="out-in">
+          <div class="alert alert-success" v-if="show" key="sucess">
+            This is something notification success
+          </div>
+          <div class="alert alert-danger" v-else key="danger">
+            This is something notification danger
+          </div>
+        </transition>
       </div>
     </div>
   </div>
