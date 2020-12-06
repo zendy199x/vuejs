@@ -79,20 +79,45 @@
             <div class="add-remove" v-if="status"></div>
           </div>
         </transition>
+
+        <hr />
+        <button
+          class="btn btn-block btn-primary"
+          @click="
+            selectComponent == 'Success'
+              ? selectComponent = 'Danger'
+              : selectComponent = 'Success'
+          "
+        >
+          Submit (toggle even)
+        </button>
+        <br />
+        <br />
+        <transition name="fade" mode="out-in">
+          <component :is="selectComponent"></component>
+        </transition>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Danger from "./components/Danger.vue";
+import Success from "./components/Success.vue";
+
 export default {
+  components: {
+    Danger,
+    Success,
+  },
   data() {
     return {
       show: true,
       status: false,
       typeAnimation: "fade",
       elementWidth: 100,
-      alertAnimation: "fade",
+      alertAnimation: "faded",
+      selectComponent: "Danger",
     };
   },
   methods: {
