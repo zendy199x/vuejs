@@ -85,17 +85,35 @@
           class="btn btn-block btn-primary"
           @click="
             selectComponent == 'Success'
-              ? selectComponent = 'Danger'
-              : selectComponent = 'Success'
+              ? (selectComponent = 'Danger')
+              : (selectComponent = 'Success')
           "
         >
           Submit (toggle even)
         </button>
         <br />
-        <br />
         <transition name="fade" mode="out-in">
           <component :is="selectComponent"></component>
         </transition>
+
+        <hr />
+        <button class="btn btn-block btn-warning" @click="addItem">
+          Add Item
+        </button>
+        <br />
+        <ul class="list-group">
+          <transition-group name="slide">
+            <li
+              class="list-group-item"
+              v-for="(number, index) in numbers"
+              :key="number"
+              style="cursor: pointer"
+              @click="removeItem(index)"
+            >
+              {{ number }}
+            </li>
+          </transition-group>
+        </ul>
       </div>
     </div>
   </div>
@@ -118,6 +136,7 @@ export default {
       elementWidth: 100,
       alertAnimation: "faded",
       selectComponent: "Danger",
+      numbers: [1, 2, 3, 4, 5, 6],
     };
   },
   methods: {
@@ -167,6 +186,13 @@ export default {
     leaveCancelled() {
       console.log("LeaveCancelled");
     },
+    addItem() {
+      const pos = Math.floor(Math.random() * this.numbers.length);
+      this.numbers.push(pos);
+    },
+    removeItem(index) {
+      this.numbers.splice(index, 1);
+    },
   },
 };
 </script>
@@ -211,6 +237,11 @@ export default {
   opacity: 0;
   transition: opacity 1s ease-in;
   animation: slide-out 1s ease-in forwards;
+  position: absolute;
+}
+
+.slide-move {
+  transition: transform 1s ease-out;
 }
 
 /* key-frames */
