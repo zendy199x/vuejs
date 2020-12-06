@@ -91,14 +91,27 @@ export default {
       show: true,
       status: false,
       typeAnimation: "fade",
+      elementWidth: 100,
+      alertAnimation: "fade",
     };
   },
   methods: {
-    beforeEnter: () => {
+    beforeEnter: (el) => {
       console.log("beforeEnter");
+      this.elementWidth = 100;
+      el.style.width = this.elementWidth + "px";
     },
-    enter() {
+    enter(el, done) {
       console.log("enter");
+      let point = 1;
+      const interval = setInterval(() => {
+        el.style.width = this.elementWidth + point * 10 + "px";
+        point++;
+        if (point > 20) {
+          clearInterval(interval);
+          done();
+        }
+      }, 20);
     },
     afterEnter() {
       console.log("afterEnter");
@@ -106,11 +119,22 @@ export default {
     afterCancelled() {
       console.log("enterCancelled");
     },
-    beforeLeave: () => {
+    beforeLeave: (el) => {
       console.log("beforeLeave");
+      this.elementWidth = 300;
+      el.style.width = this.elementWidth + "px";
     },
-    leave() {
+    leave(el, done) {
       console.log("leave");
+      let point = 1;
+      const interval = setInterval(() => {
+        el.style.width = this.elementWidth - point * 10 + "px";
+        point++;
+        if (point > 20) {
+          clearInterval(interval);
+          done();
+        }
+      }, 20);
     },
     afterLeave() {
       console.log("afterLeave");
