@@ -33,7 +33,17 @@ export default {
   },
   methods: {
     submit() {
-      console.log("Submit", this.user);
+      // console.log("Submit", this.user);
+      this.$http
+        .post("https://vue-resource-28a2e-default-rtdb.firebaseio.com/data.json", this.user)
+        .then(
+          (response) => {
+            console.log(response);
+          },
+          (error) => {
+            console.log(error);
+          }
+        );
     },
   },
 };
