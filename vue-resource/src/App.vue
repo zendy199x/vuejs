@@ -16,6 +16,26 @@
         <button class="btn btn-block btn-success" type="submit" @click="submit">
           Submit
         </button>
+
+        <hr />
+        <br />
+        <button
+          class="btn btn-block btn-warning"
+          type="submit"
+          @click="getAllUsers"
+        >
+          Get All Data
+        </button>
+        <br />
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            v-for="(user, index) in dataUsers"
+            :key="index"
+          >
+            {{ user.username }} - {{ user.email }}
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -29,13 +49,17 @@ export default {
         username: "",
         email: "",
       },
+      dataUsers: [],
     };
   },
   methods: {
     submit() {
       // console.log("Submit", this.user);
       this.$http
-        .post("https://vue-resource-28a2e-default-rtdb.firebaseio.com/data.json", this.user)
+        .post(
+          "https://vue-resource-28a2e-default-rtdb.firebaseio.com/data.json",
+          this.user
+        )
         .then(
           (response) => {
             console.log(response);
@@ -44,6 +68,20 @@ export default {
             console.log(error);
           }
         );
+    },
+    getAllUsers() {
+      this.$http
+        .get("https://vue-resource-28a2e-default-rtdb.firebaseio.com/data.json")
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          const newArr = [];
+          for (let key in data) {
+            this.dataUsers.push(data[key]);
+          }
+          this.dataUsers = newArr;
+        });
     },
   },
 };
