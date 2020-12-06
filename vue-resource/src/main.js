@@ -5,6 +5,7 @@ import VueResource from "vue-resource";
 Vue.config.productionTip = false;
 
 Vue.use(VueResource);
+Vue.http.options.root = "https://vue-resource-28a2e-default-rtdb.firebaseio.com/data.json"
 
 new Vue({
   render: (h) => h(App),

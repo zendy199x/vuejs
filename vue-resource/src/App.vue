@@ -55,30 +55,25 @@ export default {
   methods: {
     submit() {
       // console.log("Submit", this.user);
-      this.$http
-        .post(
-          "https://vue-resource-28a2e-default-rtdb.firebaseio.com/data.json",
-          this.user
-        )
-        .then(
-          (response) => {
-            console.log(response);
-          },
-          (error) => {
-            console.log(error);
-          }
-        );
+      this.$http.post("", this.user).then(
+        (response) => {
+          console.log(response);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
     },
     getAllUsers() {
       this.$http
-        .get("https://vue-resource-28a2e-default-rtdb.firebaseio.com/data.json")
+        .get("")
         .then((response) => {
           return response.json();
         })
         .then((data) => {
           const newArr = [];
           for (let key in data) {
-            this.dataUsers.push(data[key]);
+            newArr.push(data[key]);
           }
           this.dataUsers = newArr;
         });
