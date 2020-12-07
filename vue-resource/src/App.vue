@@ -50,19 +50,22 @@ export default {
         email: "",
       },
       dataUsers: [],
+      resource: {},
     };
   },
   methods: {
     submit() {
       // console.log("Submit", this.user);
-      this.$http.post("", this.user).then(
-        (response) => {
-          console.log(response);
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
+      // this.$http.post("", this.user).then(
+      //   (response) => {
+      //     console.log(response);
+      //   },
+      //   (error) => {
+      //     console.log(error);
+      //   }
+      // );
+
+      this.resource.save({}, this.user);
     },
     getAllUsers() {
       this.$http
@@ -78,6 +81,9 @@ export default {
           this.dataUsers = newArr;
         });
     },
+  },
+  created() {
+    this.resource = this.$resource("data.json");
   },
 };
 </script>
