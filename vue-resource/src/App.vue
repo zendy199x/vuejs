@@ -65,7 +65,8 @@ export default {
       //   }
       // );
 
-      this.resource.save({}, this.user);
+      // this.resource.save({}, this.user);
+      this.resource.createItem(this.user);
     },
     getAllUsers() {
       this.$http
@@ -83,7 +84,10 @@ export default {
     },
   },
   created() {
-    this.resource = this.$resource("data.json");
+    const customActions = {
+      createItem: { method: "POST", url: "user.json" },
+    };
+    this.resource = this.$resource("data.json", {}, customActions);
   },
 };
 </script>
