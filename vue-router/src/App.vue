@@ -1,25 +1,20 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div
-        class="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 text-left"
-      >
-        <h1 class="text-center">
-          Vue Routing
-        </h1>
-        <hr />
-        <router-view />
-      </div>
+  <div>
+    <Header />
+    <div class="container">
+      <router-view />
     </div>
   </div>
 </template>
 
 <script>
+import Header from "./components/layouts/Header.vue";
 export default {
   data() {
-    return {
-      
-    };
+    return {};
+  },
+  components: {
+    Header,
   },
 };
 </script>
