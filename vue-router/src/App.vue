@@ -7,6 +7,8 @@
         <h1 class="text-center">
           Vue Routing
         </h1>
+        <hr />
+        <router-view />
       </div>
     </div>
   </div>
@@ -15,7 +17,9 @@
 <script>
 export default {
   data() {
-    return;
+    return {
+      
+    };
   },
 };
 </script>
