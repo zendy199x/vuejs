@@ -15,11 +15,24 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <router-link class="nav-link" tag="a" to="/">Home</router-link>
+        <li>
+          <router-link
+            class="nav-item"
+            tag="li"
+            to="/"
+            active-class="active"
+            exact
+            ><a class="nav-link">Home</a></router-link
+          >
         </li>
-        <li class="nav-item">
-          <router-link class="nav-link" tag="a" to="/user">User</router-link>
+        <li>
+          <router-link
+            class="nav-item"
+            tag="li"
+            to="/user"
+            active-class="active"
+            ><a class="nav-link">User</a></router-link
+          >
         </li>
       </ul>
     </div>
