@@ -7,11 +7,22 @@
       laboriosam magnam fuga vero eius vitae alias perferendis quis sed tenetur
       ipsam.
     </p>
+    <hr />
+    <button class="btn btn-danger" @click="backHome">
+      Back to Home
+    </button>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    backHome() {
+      // Vue.router
+      this.$router.push("/");
+    },
+  },
+};
 </script>
 
 <style></style>
