@@ -11,7 +11,7 @@
     <button class="btn btn-danger" @click="backHome">
       Back to Home
     </button>
-    <button class="btn btn-warning" @click="goDetail">Go to Admin</button>
+    <button class="btn btn-warning" @click="goDetail">Go to Admin</button>˝
   </div>
 </template>
 

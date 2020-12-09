@@ -15,25 +15,22 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li>
-          <router-link
-            class="nav-item"
-            tag="li"
-            to="/"
-            active-class="active"
-            exact
-            ><a class="nav-link">Home</a></router-link
-          >
-        </li>
-        <li>
-          <router-link
-            class="nav-item"
-            tag="li"
-            to="/user"
-            active-class="active"
-            ><a class="nav-link">User</a></router-link
-          >
-        </li>
+        <router-link
+          class="nav-item"
+          tag="li"
+          to="/"
+          active-class="active"
+          exact
+          ><a class="nav-link">Home</a></router-link
+        >
+
+        <router-link class="nav-item" tag="li" to="/user/1" active-class="active"
+          ><a class="nav-link">User</a></router-link
+        >
+
+        <router-link class="nav-item" tag="li" to="/user/10" active-class="active"
+          ><a class="nav-link">Admin</a></router-link
+        >
       </ul>
     </div>
   </nav>
