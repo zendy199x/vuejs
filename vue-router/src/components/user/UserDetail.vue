@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>User Detail</h1>
+    <p>ID User: {{ id }}</p>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae eveniet
       fugit dolorum quasi consectetur exercitationem ea, dolores laborum
@@ -11,7 +12,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+	data() {
+		return {
+			id: this.$route.params.id
+		}
+	}
+};
 </script>
 
 <style></style>
