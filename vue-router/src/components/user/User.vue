@@ -1,18 +1,15 @@
 <template>
-  <div>
-    <h1>User</h1>
+  <div class="mt-3">
+    <h1 class="text-center">User Management</h1>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae eveniet
-      fugit dolorum quasi consectetur exercitationem ea, dolores laborum
-      laboriosam magnam fuga vero eius vitae alias perferendis quis sed tenetur
-      ipsam.
+      This is area to manage user of website
     </p>
     <hr />
-    <button class="btn btn-danger" @click="backHome">
+    <button class="btn btn-danger btn-block" @click="backHome">
       Back to Home
     </button>
     <router-view />
-    <button class="btn btn-warning" @click="goDetail">Go to Admin</button>˝
+    <button class="btn btn-warning btn-block" @click="goDetail">Go to Admin</button>˝
   </div>
 </template>
 
