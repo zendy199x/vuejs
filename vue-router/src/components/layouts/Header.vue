@@ -24,7 +24,7 @@
           ><a class="nav-link">Home</a></router-link
         >
 
-        <router-link class="nav-item" tag="li" to="/user/1" active-class="active"
+        <router-link class="nav-item" tag="li" to="/user" active-class="active"
           ><a class="nav-link">User</a></router-link
         >
 

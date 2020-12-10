@@ -11,6 +11,7 @@
     <button class="btn btn-danger" @click="backHome">
       Back to Home
     </button>
+    <router-view />
     <button class="btn btn-warning" @click="goDetail">Go to Admin</button>˝
   </div>
 </template>
