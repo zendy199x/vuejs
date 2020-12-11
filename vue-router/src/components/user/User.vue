@@ -9,7 +9,7 @@
       Back to Home
     </button>
     <router-view />
-    <button class="btn btn-warning btn-block" @click="goDetail">Go to Admin</button>˝
+    <button class="btn btn-warning btn-block" @click="goDetail">Go to Admin</button>
   </div>
 </template>
 

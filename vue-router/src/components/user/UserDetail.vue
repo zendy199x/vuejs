@@ -8,7 +8,11 @@
     <router-link
       tag="button"
       class="btn btn-warning btn-block"
-      :to="{ name: 'useredit', params: { id: $route.params.id } }"
+      :to="{
+        name: 'useredit',
+        params: { id: $route.params.id },
+        query: { locale: 'vi', browser: 'chrome' },
+      }"
     >
       Edit User
     </router-link>
