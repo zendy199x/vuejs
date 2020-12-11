@@ -18,7 +18,9 @@ export default {
   methods: {
     backHome() {
       // Vue.router
-      this.$router.push("/");
+      // this.$router.push("/"); // Way 1
+      // this.$router.push({ path: "/"}); // Way 2
+      this.$router.push({ name: "homepage"}); // Way 3
     },
     goDetail() {
       this.$router.push("/user/1");
