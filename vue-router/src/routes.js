@@ -4,6 +4,7 @@ import UserStart from "./components/user/UserStart";
 import UserDetail from "./components/user/UserDetail";
 import UserEdit from "./components/user/UserEdit";
 import Header from "./components/layouts/Header.vue";
+import NotFound from "./components/NotFound.vue";
 
 export const routes = [
   {
@@ -25,4 +26,6 @@ export const routes = [
     ],
   },
   { path: "/auth-redirect", redirect: { name: "homepage" } },
+  { path: "/404", name: "errorpage", component: NotFound },
+  { path: "*", redirect: "/404" },
 ];
