@@ -2,9 +2,10 @@
   <div class="container">
     <h1>VueX</h1>
     <hr />
-    <result :result="result" />
+    <!-- <result :result="result" /> -->
+    <result />
     <br />
-    <counter @update="result += $event" />
+    <counter />
   </div>
 </template>
 
@@ -13,11 +14,11 @@ import Counter from "./components/Counter.vue";
 import Result from "./components/Result.vue";
 
 export default {
-  data() {
-    return {
-      result: 0,
-    };
-  },
+  // data() {
+  //   return {
+  //     result: 0,
+  //   };
+  // },
   components: {
     Result,
     Counter,

@@ -6,10 +6,12 @@
 
 <script>
 export default {
-  data() {
-    return {};
+  computed: {
+    result() {
+      return this.$store.state.result;
+    },
   },
-  props: ["result"],
+  // props: ["result"],
 };
 </script>
 

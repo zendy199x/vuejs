@@ -12,15 +12,14 @@
 
 <script>
 export default {
-  data() {
-    return {};
-  },
   methods: {
     increase() {
-      this.$emit("update", 1);
+      // this.$emit("update", 1);
+      this.$store.state.result++;
     },
     decrease() {
-      this.$emit("update", -1);
+      // this.$emit("update", -1);
+      this.$store.state.result--;
     },
   },
 };
