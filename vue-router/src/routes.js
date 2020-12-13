@@ -1,8 +1,48 @@
 import Home from "./components/Home";
-import User from "./components/user/User";
-import UserStart from "./components/user/UserStart";
-import UserDetail from "./components/user/UserDetail";
-import UserEdit from "./components/user/UserEdit";
+
+const User = (resolve) => {
+  require.ensure(
+    ["./components/user/User"],
+    () => {
+      resolve(require("./components/user/User"));
+    },
+    "user"
+  );
+};
+
+const UserStart = (resolve) => {
+  require.ensure(
+    ["./components/user/UserStart"],
+    () => {
+      resolve(require("./components/user/UserStart"));
+    },
+    "user"
+  );
+};
+
+const UserDetail = (resolve) => {
+  require.ensure(
+    ["./components/user/UserDetail"],
+    () => {
+      resolve(require("./components/user/UserDetail"));
+    },
+    "user"
+  );
+};
+
+const UserEdit = (resolve) => {
+  require.ensure(
+    ["./components/user/UserEdit"],
+    () => {
+      resolve(require("./components/user/UserEdit"));
+    },
+    "user"
+  );
+};
+// import User from "./components/user/User";
+// import UserStart from "./components/user/UserStart";
+// import UserDetail from "./components/user/UserDetail";
+// import UserEdit from "./components/user/UserEdit";
 import Header from "./components/layouts/Header.vue";
 import NotFound from "./components/NotFound.vue";
 
