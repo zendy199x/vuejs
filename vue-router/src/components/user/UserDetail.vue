@@ -5,11 +5,7 @@
     <p>ID User: {{ $route.params.id }}</p>
     <hr />
     <!-- <router-link tag="button" class="btn btn-warning btn-block" :to="`/user/${$route.params.id}/edit`"> -->
-    <router-link
-      tag="button"
-      class="btn btn-warning btn-block"
-      :to="link"
-    >
+    <router-link tag="button" class="btn btn-warning btn-block" :to="link">
       Edit User
     </router-link>
   </div>
@@ -33,6 +29,13 @@ export default {
       },
     };
   },
+  // beforeRouteEnter(to, from, next) {
+  //   if (false) {
+  //     next();
+  //   } else {
+  //     next(false);
+  //   }
+  // },
   watch: {
     $route(to) {
       this.id = to.params.id;

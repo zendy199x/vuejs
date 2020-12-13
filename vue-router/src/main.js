@@ -21,6 +21,11 @@ const router = new VueRouter({
   },
 });
 
+router.beforeEach((to, from, next) => {
+  console.log("Global route guards");
+  next();
+});
+
 new Vue({
   router,
   render: (h) => h(App),
