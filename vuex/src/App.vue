@@ -4,6 +4,8 @@
     <hr />
     <!-- <result :result="result" /> -->
     <result />
+    <hr />
+    <other />
     <br />
     <counter />
   </div>
@@ -11,6 +13,7 @@
 
 <script>
 import Counter from "./components/Counter.vue";
+import Other from "./components/Other.vue";
 import Result from "./components/Result.vue";
 
 export default {
@@ -22,6 +25,7 @@ export default {
   components: {
     Result,
     Counter,
+    Other,
   },
 };
 </script>
