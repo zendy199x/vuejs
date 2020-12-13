@@ -1,6 +1,7 @@
 <template>
   <div>
     <p>This is result: {{ result }}</p>
+    <p>This is getter result: {{ getterResult }}</p>
   </div>
 </template>
 
@@ -9,6 +10,9 @@ export default {
   computed: {
     result() {
       return this.$store.state.result;
+    },
+    getterResult() {
+      return this.$store.getters.tenResult;
     },
   },
   // props: ["result"],
