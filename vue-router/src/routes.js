@@ -26,9 +26,9 @@ export const routes = [
         name: "userdetail",
         component: UserDetail,
         // beforeEnter: (to, from, next) => {
-          beforeEnter: () => {
-          console.log("Action route guards");
-        },
+        //   beforeEnter: () => {
+        //   console.log("Action route guards");
+        // },
       },
       { path: ":id/edit", name: "useredit", component: UserEdit },
     ],
