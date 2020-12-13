@@ -8,11 +8,7 @@
     <router-link
       tag="button"
       class="btn btn-warning btn-block"
-      :to="{
-        name: 'useredit',
-        params: { id: $route.params.id },
-        query: { locale: 'vi', browser: 'chrome' },
-      }"
+      :to="link"
     >
       Edit User
     </router-link>
@@ -24,6 +20,17 @@ export default {
   data() {
     return {
       id: this.$route.params.id,
+      link: {
+        name: "useredit",
+        params: {
+          id: this.$route.params.id,
+        },
+        query: {
+          locate: "vi",
+          browser: "chrome",
+        },
+        hash: "#vue",
+      },
     };
   },
   watch: {
