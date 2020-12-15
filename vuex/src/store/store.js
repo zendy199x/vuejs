@@ -19,5 +19,8 @@ export const store = new Vuex.Store({
     increaseOption(state, n) {
       state.result += n;
     },
+    decreaseOption(state) {
+      state.result--;
+    },
   },
 });
