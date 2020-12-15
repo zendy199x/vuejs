@@ -15,4 +15,9 @@ export const store = new Vuex.Store({
       return state.result + " name product";
     },
   },
+  mutations: {
+    increaseOption(state, n) {
+      state.result += n;
+    },
+  },
 });
