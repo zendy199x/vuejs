@@ -11,5 +11,8 @@ export const store = new Vuex.Store({
     tenResult: (state) => {
       return state.result * 10;
     },
+    nameResult: (state) => {
+      return state.result + " name product";
+    },
   },
 });
