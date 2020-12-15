@@ -16,11 +16,21 @@ export const store = new Vuex.Store({
     },
   },
   mutations: {
-    increaseOption(state, n) {
-      state.result += n;
+    increaseOption(state) {
+      state.result++;
     },
     decreaseOption(state) {
       state.result--;
+    },
+  },
+  actions: {
+    increment: ({ commit }) => {
+      commit("increaseOption");
+    },
+    asyncDecrement: ({ commit }) => {
+      setTimeout(() => {
+        commit("decreaseOption");
+      }, 2000);
     },
   },
 });
